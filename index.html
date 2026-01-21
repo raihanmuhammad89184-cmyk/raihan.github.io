@@ -1,8 +1,3 @@
-from flask import Flask, render_template_string
-
-app = Flask(__name__)
-
-html_content = """
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -217,10 +212,3 @@ document.getElementById('no-btn').addEventListener('click', () => {
 </body>
 </html>
 """
-
-@app.route("/")
-def romantic_confession():
-    return render_template_string(html_content)
-
-if __name__ == "__main__":
-    app.run(debug=True)
